@@ -52,8 +52,7 @@ const Web = () => {
 
   return (
     <div className="web-buttons">
-      {/* <button className="web-button" onClick={openPopup}>Directory Busting</button>
-            <Popup isOpen={isPopupOpen} onRequestClose={closePopup} />  */}
+     
       <button className="web-button" onClick={openpopup}>
         Headers
       </button>
@@ -73,12 +72,7 @@ const Web = () => {
       </button>
       <Crawl isOpen={ispopupOpenC} onRequestClose={closepopupC} />
 
-      {/* <button className="web-button" onClick={openPopup}>Crawl</button>
-            <Popup isOpen={isPopupOpen} onRequestClose={closePopup} />
-            <button className="web-button" onClick={openPopup}>Sub Domain</button>
-            <Popup isOpen={isPopupOpen} onRequestClose={closePopup} /> */}
-      {/* <button className="web-button" onClick={openPopup}>Whois</button>
-            <Whois isOpen={isPopupOpen} onRequestClose={closePopup} />  */}
+      
       <button className="web-button" onClick={openPopup}>
         Whois
       </button>

@@ -50,7 +50,7 @@ const Ssl = ({ isOpen, onRequestClose }) => {
         }
 
         // Close the popup after submission
-        onRequestClose();
+        // onRequestClose();
     };
 
     return (

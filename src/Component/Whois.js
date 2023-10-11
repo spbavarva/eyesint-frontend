@@ -50,7 +50,7 @@ const Whoiss = ({ isOpen, onRequestClose }) => {
         }
 
         // Close the popup after submission
-        onRequestClose();
+        // onRequestClose();
     };
 
     return (

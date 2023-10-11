@@ -4,7 +4,7 @@ import "./Popup.css"; // Import your CSS file for styling
 
 Modal.setAppElement("#root");
 
-const Crawl = ({ isOpen, onRequestClose }) => {
+const Phone = ({ isOpen, onRequestClose }) => {
     const [url, setUrl] = useState(""); // State to store the entered URL
     const [outputMessage, setOutputMessage] = useState(""); // State for the output message
     const [data,setdata]=useState(null)
@@ -33,9 +33,9 @@ const Crawl = ({ isOpen, onRequestClose }) => {
 
         
         if (url) {
-            setOutputMessage(`You submitted the URL: ${url}`);
+            setOutputMessage(`You submitted number: ${url}`);
            
-            const response = await fetch("http://localhost:5000/web/crawlmain", {
+            const response = await fetch("http://localhost:5000/foot/nameinfo", {
                 method: "post",
                 headers: {
                     "content-type": "application/json"
@@ -46,7 +46,7 @@ const Crawl = ({ isOpen, onRequestClose }) => {
             setdata(data.data)
             console.log(data)
         } else {
-            setOutputMessage("Please enter a URL.");
+            setOutputMessage("Please enter number.");
         }
 
         // Close the popup after submission
@@ -61,10 +61,10 @@ const Crawl = ({ isOpen, onRequestClose }) => {
             style={customStyles}
         >
             <div className="popup-content">
-                <h2>Enter URL for Crawl</h2>
+                <h2>Enter username to find</h2>
                 <input
                     type="text"
-                    placeholder="https://example.com"
+                    placeholder="919999999999"
                     value={url}
                     onChange={handleUrlChange}
                     className="url-input" // Apply CSS class to the input
@@ -84,4 +84,4 @@ const Crawl = ({ isOpen, onRequestClose }) => {
     );
 };
 
-export default Crawl;
+export default Phone;

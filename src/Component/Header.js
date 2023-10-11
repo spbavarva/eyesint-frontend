@@ -35,22 +35,28 @@ const Header = ({ isOpen, onRequestClose }) => {
         if (url) {
             setOutputMessage(`You submitted the URL: ${url}`);
            
-            const response = await fetch("http://localhost:5000/web/header", {
-                method: "post",
-                headers: {
-                    "content-type": "application/json"
-                },
-                body: JSON.stringify({ url: url })
-            })
-            const data = await response.json()
-            setdata(data.data)
-            console.log(data)
+            try {
+                const response = await fetch("http://localhost:5000/web/header", {
+                    method: "post",
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify({ url: url }),
+                });
+                const data = await response.json();
+                setdata(data.data);
+                console.log(data);
+            } catch (error) {
+                // Handle any errors that occur during the fetch request
+                console.error("Error fetching data:", error);
+                setOutputMessage("An error occurred while fetching data.");
+            } finally {
+                // Close the popup after the fetch request is complete
+                // onRequestClose();
+            }
         } else {
             setOutputMessage("Please enter a URL.");
         }
-
-        // Close the popup after submission
-        onRequestClose();
     };
 
     return (
