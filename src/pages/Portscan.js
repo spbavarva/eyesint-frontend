@@ -1,64 +1,35 @@
 import React, { useState } from "react";
-import Header from "../Component/Header.js";
-import Whois from "../Component/Whois.js";
+import Domain from "../Component/Domain.js";
 // import Popup from "./Popup";
 import "../Component/Web.css"; // Import your CSS file
-import Ssl from "../Component/SSL.js";
-import Mail from "../Component/MAILa.js";
-import Crawl from "../Component/Crawler.js"
+import Phone from "../Component/Phonenum.js";
+import Name from "../Component/Name.js";
 import { Link } from "react-router-dom";
-import Mailall from "../Component/AllmailF.js";
+import Ports from "../Component/Port.js";
 
 
-const Webcrawl = () => {
-  const [ispopupOpen, setIspopupOpen] = useState(false);
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [ispopupOpenSSL, setIspopupOpenSSL] = useState(false);
-  const [ispopupOpenM, setIspopupOpenM] = useState(false);
-  const [ispopupOpenC, setIspopupOpenC] = useState(false);
-  const [ispopupOpenCp, setIspopupOpenCp] = useState(false);
+const Portscan = () => {
+    const [ispopupOpenC, setIspopupOpenC] = useState(false);
+    const [ispopupOpenP, setIspopupOpenP] = useState(false);
 
 
-  const openpopup = () => {
-    setIspopupOpen(true);
-  };
-  const closepopup = () => {
-    setIspopupOpen(false);
-  };
-
-  const openPopup = () => {
-    setIsPopupOpen(true);
-  };
-  const closePopup = () => {
-    setIsPopupOpen(false);
-  };
-
-  const openPopupSSL = () => {
-    setIspopupOpenSSL(true);
-  };
-  const closepopupSSL = () => {
-    setIspopupOpenSSL(false);
-  };
-
-  const openPopupM = () => {
-    setIspopupOpenM(true);
-  };
-  const closepopupM = () => {
-    setIspopupOpenM(false);
-  };
-
-  const openPopupC = () => {
-    setIspopupOpenC(true);
-  };
-  const closepopupC = () => {
-    setIspopupOpenC(false);
-  };
-  const openPopupCp = () => {
-    setIspopupOpenCp(true);
-  };
-  const closepopupCp = () => {
-    setIspopupOpenCp(false);
-  };
+   
+    
+      const openPopupC = () => {
+        setIspopupOpenC(true);
+      };
+      const closepopupC = () => {
+        setIspopupOpenC(false);
+      };
+    
+      const openPopupP = () => {
+        setIspopupOpenP(true);
+      };
+      const closepopupP = () => {
+        setIspopupOpenP(false);
+      };
+    
+     
   return (
 <>
   <div className="bg-white">
@@ -97,28 +68,28 @@ const Webcrawl = () => {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           <a
-            href="/"
+            href="index.html"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             Home
           </a>
           <a
-            href="about"
+            href="about.html"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             About
           </a>
           <a
-            href="blog"
+            href="blog.html"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             Blog
           </a>
           <a
-            href="contact"
+            href="contact.html"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
-            
+           
           </a>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -127,7 +98,9 @@ const Webcrawl = () => {
           </a>
         </div>
       </nav>
+      {/* Mobile menu, show/hide based on menu open state. */}
       <div className="lg:hidden" role="dialog" aria-modal="true">
+        {/* Background backdrop, show/hide based on slide-over state. */}
         <div className="fixed inset-0 z-50" />
         <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
@@ -164,28 +137,28 @@ const Webcrawl = () => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <a
-                  href="index"
+                  href="index.html"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Homne
                 </a>
                 <a
-                  href="about"
+                  href="about.html"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   About
                 </a>
                 <a
-                  href="blog"
+                  href="blog.html"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Blog
                 </a>
                 <a
-                  href="contact"
+                  href="contact.html"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                 
+                  
                 </a>
               </div>
               <div className="py-6">
@@ -207,125 +180,46 @@ const Webcrawl = () => {
     <div className="container px-5 py-24 mx-auto">
       <div className="flex flex-col text-center w-full mb-20">
         <h2 className="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">
-          Explore the world of web with
+          Explore the world of cyber
         </h2>
         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-          Web Crawling
+          Port scanning
         </h1>
         <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-          what ever you want to learn about website you can find here the data
-          of the website and you can explore the all detail like header , ssl
-          info, Directory bursting etc. using our tool.
+        We provide you with one of the best tools for efficient port scanning, allowing you to gather essential information from various ports and services
         </p>
       </div>
-      <div className="flex flex-wrap">
-        <div className="xl:w-1/3 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+      <div style={{paddingLeft: "300px"}}>
+
+      <div className="display: flex; justify-content: center;">
+        <div className="md:w-full px-80 py-6 border-opacity-60">
           <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-            Email Finder
+           
           </h2>
-          <p className="leading-relaxed text-base mb-4">
-            Find how many emails are attached with the website like all email
-            are there in the website
+          <p style={{paddingRight:"200px"}} className="leading-relaxed text-base mb-4">
+            You can find useful information regarding your provided ports and services
           </p>
-         
-          <button className="web-button" onClick={openPopupM}>
-        Email Finder
+          <button className="web-button" onClick={openPopupP}>
+       Normal Scanner
       </button>
-      <Mail isOpen={ispopupOpenM} onRequestClose={closepopupM} />
+      <Ports isOpen={ispopupOpenP} onRequestClose={closepopupP} />
         </div>
-        <div className="xl:w-1/3 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-          <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-            SSL Info
-          </h2>
-          <p className="leading-relaxed text-base mb-4">
-            find the all the ssl information of the website hence it is very
-            important topic for us to find
-          </p>
-         
-          <button className="web-button" onClick={openPopupSSL}>
-        SSL Info
-      </button>
-      <Ssl isOpen={ispopupOpenSSL} onRequestClose={closepopupSSL} />
-        </div>
-       
-        <div className="xl:w-1/3 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-          <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-            WHOIS
-          </h2>
-          <p className="leading-relaxed text-base mb-4">
-            want to find the who is look up so use this tool so that you can
-            also find that details
-          </p>
-         
-          <button className="web-button" onClick={openPopup}>
-        Whois
-      </button>
-      <Whois isOpen={isPopupOpen} onRequestClose={closePopup} />
+
+
         </div>
       </div>
-      <br />
-      <br />
-      
-      <div className="flex flex-wrap">
-        <div className="xl:w-1/3 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-          <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-            Headers
-          </h2>
-          <p className="leading-relaxed text-base mb-4">
-            want to find all the headers of the website so you can use this for
-            the all headers.
-          </p>
-         
-          <button className="web-button" onClick={openpopup}>
-        Headers
-      </button>
-      <Header isOpen={ispopupOpen} onRequestClose={closepopup} />
-        </div>
-
-
-        <div className="xl:w-1/3 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-          <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-            Crawl
-          </h2>
-          <p className="leading-relaxed text-base mb-4">
-            all the crawl details you can find easily with the help of that and
-            you can get all the DATA.
-          </p>
-          <button className="web-button" onClick={openPopupC}>
-        Web Crawler
-      </button>
-      <Crawl isOpen={ispopupOpenC} onRequestClose={closepopupC} />
-
-        </div>
-
        
-          <div className="xl:w-1/3 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-          <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-            All mails
-          </h2>
-          <p className="leading-relaxed text-base mb-4">
-            all the crawled emails you can see below which is static because it takes long to crawl 100's of pages
-          </p>
-          <button className="web-button" onClick={openPopupCp}>
-        All mails of bvm
-      </button>
-      <Mailall isOpen={ispopupOpenCp} onRequestClose={closepopupCp} />
-
-        </div>
-
-
         
-      </div>
-     
+       
       <div className="flex flex-wrap">
-  <Link to="/PersonFoot" className="xl:w-1/8 flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-    Person Footprint
+  <Link to="/Webcrawl" className="xl:w-1/8 flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+    Web scrapping
   </Link>
   <Link to="/" className="xl:w-1/8 flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
     Home
   </Link>
-  <Link to="/Portscan" className="xl:w-1/8 flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-    Port Scanning
+  <Link to="/PersonFoot" className="xl:w-1/8 flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+   Person Footprinting
   </Link>
 </div>
 
@@ -359,11 +253,13 @@ const Webcrawl = () => {
           @Cyber Geeks
         </a>
       </p>
+      
     </div>
   </footer>
 </>
 
+
 );
 };
 
-export default Webcrawl;
+export default Portscan;

@@ -1,0 +1,54 @@
+{
+    "ports": [
+        {
+            "port": "21/tcp",
+            "state": "open",
+            "service": "ftp"
+        },
+        {
+            "port": "80/tcp",
+            "state": "open",
+            "service": "http"
+        },
+        {
+            "port": "443/tcp",
+            "state": "open",
+            "service": "https"
+        },
+        {
+            "port": "445/tcp",
+            "state": "open",
+            "service": "microsoft-ds"
+        },
+        {
+            "port": "512/tcp",
+            "state": "open",
+            "service": "exec"
+        },
+        {
+            "port": "554/tcp",
+            "state": "open",
+            "service": "rtsp"
+        },
+        {
+            "port": "1723/tcp",
+            "state": "open",
+            "service": "pptp"
+        },
+        {
+            "port": "3306/tcp",
+            "state": "open",
+            "service": "mysql"
+        },
+        {
+            "port": "5432/tcp",
+            "state": "open",
+            "service": "postgresql"
+        },
+        {
+            "port": "8888/tcp",
+            "state": "open",
+            "service": "sun-answerbook"
+        }
+    ]
+}

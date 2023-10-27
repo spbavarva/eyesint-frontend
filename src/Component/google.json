@@ -1,0 +1,64 @@
+{
+    "ports": [
+        {
+            "port": "21/tcp",
+            "state": "open",
+            "service": "ftp"
+        },
+        {
+            "port": "22/tcp",
+            "state": "open",
+            "service": "ssh"
+        },
+        {
+            "port": "80/tcp",
+            "state": "open",
+            "service": "http"
+        },
+        {
+            "port": "135/tcp",
+            "state": "open",
+            "service": "msrpc"
+        },
+        {
+            "port": "139/tcp",
+            "state": "open",
+            "service": "netbios-ssn"
+        },
+        {
+            "port": "443/tcp",
+            "state": "open",
+            "service": "https"
+        },
+        {
+            "port": "445/tcp",
+            "state": "open",
+            "service": "microsoft-ds"
+        },
+        {
+            "port": "554/tcp",
+            "state": "open",
+            "service": "rtsp"
+        },
+        {
+            "port": "587/tcp",
+            "state": "open",
+            "service": "submission"
+        },
+        {
+            "port": "993/tcp",
+            "state": "open",
+            "service": "imaps"
+        },
+        {
+            "port": "1723/tcp",
+            "state": "open",
+            "service": "pptp"
+        },
+        {
+            "port": "3389/tcp",
+            "state": "open",
+            "service": "rdp"
+        }
+    ]
+}

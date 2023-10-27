@@ -1,0 +1,11 @@
+port:21/tcp open ftp
+port:22/tcp open ssh
+port:80/tcp open http
+port:135/tcp open msrpc
+port:139/tcp open netbios-ssn
+port:443/tcp open https
+port:445/tcp open microsoft-ds
+port:554/tcp open rtsp
+port:587/tcp open submission
+port:993/tcp open imaps
+port:1723/tcp open pptp

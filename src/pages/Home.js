@@ -8,8 +8,17 @@ import sneh from "../pages/image/sneh.jpeg";
 import kapu from "../pages/image/kapu.jpeg";
 import smit from "../pages/image/1661447281400.jpeg";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink, Element, animateScroll as scroll } from "react-scroll";
+// import "../pages/Home.cs"
+
+
 
 const Home = () => {
+  const scrollToTop = () => {
+    scroll.scrollToTop({ smooth: true });
+  };
+
+
   return (
     <div>
       <div className="bg-white">
@@ -69,7 +78,7 @@ const Home = () => {
                 href="contact"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
-                Contact
+               
               </a>
             </div>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -77,7 +86,7 @@ const Home = () => {
                 href="#"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
-                Log in <span aria-hidden="true">&rarr;</span>
+               
               </a>
             </div>
           </nav>
@@ -137,21 +146,9 @@ const Home = () => {
                     >
                       Blog
                     </a>
-                    <a
-                      href="contact.html"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Contact
-                    </a>
+                    
                   </div>
-                  <div className="py-6">
-                    <a
-                      href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Log in
-                    </a>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -189,8 +186,9 @@ const Home = () => {
                 website , port and social media , here what you want....
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
+              <ScrollLink to="top" spy={true} smooth={true} offset={-40} duration={500}>
                 <a
-                  href="/Webcrawl"
+                  href="" onClick={scrollToTop}
                   className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Go to TOOL
@@ -201,6 +199,7 @@ const Home = () => {
                 >
                   {" "}<span aria-hidden="true" />
                 </a>
+                </ScrollLink>
               </div>
             </div>
           </div>
@@ -245,7 +244,8 @@ const Home = () => {
               src={logo}
             />
           </div>
-          <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+          <Element name="top" className="element" />
+          <div id="Tool" className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
             <div className="flex flex-col mb-10 lg:items-start items-center">
               <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
                 <svg
@@ -317,18 +317,12 @@ const Home = () => {
                   know click here for the check...
                 </p>
                 <a className="mt-3 text-indigo-500 inline-flex items-center">
-                  Learn More
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
+                
+                  <Link to="/Portscan">
+                    <button className="home-button">
+                      {" "}Go to Port Scanning
+                    </button>
+                  </Link>
                 </a>
               </div>
             </div>
@@ -581,3 +575,4 @@ const Home = () => {
 };
 
 export default Home;
+

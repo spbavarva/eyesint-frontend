@@ -33,7 +33,7 @@ const Phone = ({ isOpen, onRequestClose }) => {
 
         
         if (url) {
-            setOutputMessage(`You submitted number: ${url}`);
+            setOutputMessage(`Your submitted name : ${url}`);
            
             const response = await fetch("http://localhost:5000/foot/nameinfo", {
                 method: "post",
@@ -46,7 +46,7 @@ const Phone = ({ isOpen, onRequestClose }) => {
             setdata(data.data)
             console.log(data)
         } else {
-            setOutputMessage("Please enter number.");
+            setOutputMessage("Please enter name.");
         }
 
         // Close the popup after submission
@@ -64,7 +64,7 @@ const Phone = ({ isOpen, onRequestClose }) => {
                 <h2>Enter username to find</h2>
                 <input
                     type="text"
-                    placeholder="919999999999"
+                    placeholder="John Doe"
                     value={url}
                     onChange={handleUrlChange}
                     className="url-input" // Apply CSS class to the input

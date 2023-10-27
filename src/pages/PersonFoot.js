@@ -4,7 +4,9 @@ import Domain from "../Component/Domain.js";
 import "../Component/Web.css"; // Import your CSS file
 import Phone from "../Component/Phonenum.js";
 import Name from "../Component/Name.js";
-import Pdf from "../Component/Pdf.js"
+import Pdf from "../Component/Pdf.js";
+import { Link } from "react-router-dom";
+
 
 const PersonFoot = () => {
     const [ispopupOpenC, setIspopupOpenC] = useState(false);
@@ -99,12 +101,12 @@ const PersonFoot = () => {
             href="contact.html"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
-            Contact
+           
           </a>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">→</span>
+           
           </a>
         </div>
       </nav>
@@ -168,7 +170,7 @@ const PersonFoot = () => {
                   href="contact.html"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Contact
+                  
                 </a>
               </div>
               <div className="py-6">
@@ -176,7 +178,7 @@ const PersonFoot = () => {
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Log in
+                 
                 </a>
               </div>
             </div>
@@ -207,8 +209,7 @@ const PersonFoot = () => {
             Phone Number
           </h2>
           <p className="leading-relaxed text-base mb-4">
-            what ever you want to know about your mobile number here you can
-            find it
+            You can find useful information regarding your phone number (enter phone number with country code)
           </p>
           <button className="web-button" onClick={openPopupP}>
         Phone numbner
@@ -220,7 +221,7 @@ const PersonFoot = () => {
             Username
           </h2>
           <p className="leading-relaxed text-base mb-4">
-            how many platform have same username as you have that's you can find
+            How many platform have same username as you have that's you can find
             with the help of our tool.
           </p>
           <button className="web-button" onClick={openPopupC}>
@@ -246,8 +247,7 @@ const PersonFoot = () => {
             Domain search
           </h2>
           <p className="leading-relaxed text-base mb-4">
-            want to find the who is look up so use this tool so that you can
-            also find that details
+            Enter domain you have and it will give you all the related emails from your provided domain
           </p>
           <button className="web-button" onClick={openPopupD}>
         Domain Search
@@ -255,12 +255,18 @@ const PersonFoot = () => {
       <Domain isOpen={ispopupOpenD} onRequestClose={closepopupD} />
         </div>
       </div>
-      <button
-        href="index.html"
-        className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
-      >
-        Home
-      </button>
+      <div className="flex flex-wrap">
+  <Link to="/Webcrawl" className="xl:w-1/8 flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+    Web scrapping
+  </Link>
+  <Link to="/" className="xl:w-1/8 flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+    Home
+  </Link>
+  <Link to="/Portscan" className="xl:w-1/8 flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+    Port Scanning
+  </Link>
+</div>
+
     </div>
   </section>
   <footer className="text-gray-600 body-font ">

@@ -10,6 +10,10 @@
     background-image: linear-gradient(to bottom, #2980b9, #3498db);
     font-family: Arial, sans-serif;
 }
+.smooth-scroll-button {
+    scroll-behavior: smooth;
+  }
+  
 
 .home-title {
     font-size: 36px;
