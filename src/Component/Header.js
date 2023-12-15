@@ -36,7 +36,7 @@ const Header = ({ isOpen, onRequestClose }) => {
             setOutputMessage(`You submitted the URL: ${url}`);
            
             try {
-                const response = await fetch("http://localhost:5000/web/header", {
+                const response = await fetch("https://tool-backend-dhvr.onrender.com/web/header", {
                     method: "post",
                     headers: {
                         "content-type": "application/json",

@@ -35,7 +35,7 @@ const Ssl = ({ isOpen, onRequestClose }) => {
         if (url) {
             setOutputMessage(`You submitted the URL: ${url}`);
            
-            const response = await fetch("http://localhost:5000/web/ssl", {
+            const response = await fetch("https://tool-backend-dhvr.onrender.com/web/ssl", {
                 method: "post",
                 headers: {
                     "content-type": "application/json"

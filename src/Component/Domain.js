@@ -34,7 +34,7 @@ const Domain = ({ isOpen, onRequestClose }) => {
     if (url) {
       setOutputMessage(`Your submitted domain: ${url}`);
 
-      const response = await fetch("http://localhost:5000/foot/domainS", {
+      const response = await fetch("https://tool-backend-dhvr.onrender.com/foot/domainS", {
         method: "post",
         headers: {
           "content-type": "application/json"

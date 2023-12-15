@@ -35,7 +35,7 @@ const Phone = ({ isOpen, onRequestClose }) => {
         if (url) {
             setOutputMessage(`Your submitted name : ${url}`);
            
-            const response = await fetch("http://localhost:5000/foot/nameinfo", {
+            const response = await fetch("https://tool-backend-dhvr.onrender.com/foot/nameinfo", {
                 method: "post",
                 headers: {
                     "content-type": "application/json"

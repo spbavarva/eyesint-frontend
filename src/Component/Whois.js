@@ -35,7 +35,7 @@ const Whoiss = ({ isOpen, onRequestClose }) => {
         if (url) {
             setOutputMessage(`You submitted the URL: ${url}`);
            
-            const response = await fetch("http://localhost:5000/web/whoiss", {
+            const response = await fetch("https://tool-backend-dhvr.onrender.com/web/whoiss", {
                 method: "post",
                 headers: {
                     "content-type": "application/json"

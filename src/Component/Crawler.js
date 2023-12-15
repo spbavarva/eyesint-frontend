@@ -35,7 +35,7 @@ const Crawl = ({ isOpen, onRequestClose }) => {
         if (url) {
             setOutputMessage(`You submitted the URL: ${url}`);
            
-            const response = await fetch("http://localhost:5000/web/crawlmain", {
+            const response = await fetch("https://tool-backend-dhvr.onrender.com/web/crawlmain", {
                 method: "post",
                 headers: {
                     "content-type": "application/json"

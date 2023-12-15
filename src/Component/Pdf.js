@@ -38,7 +38,7 @@ const Pdf = ({ isOpen, onRequestClose }) => {
             formData.append("file", file);
 
             // Make a POST request to your server with the file data
-            const response = await fetch("http://localhost:5000/foot/pdfinfo", {
+            const response = await fetch("https://tool-backend-dhvr.onrender.com/foot/pdfinfo", {
                 method: "post",
                 body: formData,
             });
